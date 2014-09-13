@@ -66,5 +66,3 @@ pomExtra := (
       <url>https://github.com/dbaumann</url>
     </developer>
   </developers>)
-
-useGpg := true
