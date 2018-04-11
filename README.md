@@ -1,6 +1,6 @@
 A Scala macro for converting a case class into its abstract equivalent.
 
-#The problem
+# The problem
 
 Sealed case class hierarchies are a popular alternative to enumerations in Scala, particularly for defining message protocols in actor systems.
 
@@ -44,7 +44,7 @@ class LowLevelService extends BaseService {
 }
 ```
 
-#A solution
+# A solution
 
 Define the high level components of the protocol with abstract members representing the compiler-generated details of the case class.
 
@@ -131,7 +131,7 @@ object LowLevelProtocol extends BaseServiceProtocol {
 ...
 ```
 
-#Installation
+# Installation
 
 Add the following dependency to your project:
 
@@ -141,13 +141,13 @@ libraryDependencies += "org.dbaumann" %% "abstract-case-class" % "0.1"
 
 This library is compatible with both Scala 2.10 and 2.11.
 
-#Tests
+# Tests
 
 The tests make use of scala runtime reflection, and only run consistently under Scala 2.11. 2.10 is also supported through the use of deprecated features in scala.reflect.api; if you're using 2.10, you'll just have to take my word that it works.
 
 Also note that compiling under Scala 2.11 comsumes more PermGen space. A workaround is `export SBT_OPTS=-XX:MaxPermSize=256m`.
 
-#Known limitations
+# Known limitations
  * no support for polymorphic types
  * no support for case class instance methods, only companion objects
  * when abstract case class extends multiple types, the "top" type is assumed to be the first declared
