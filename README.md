@@ -1,3 +1,10 @@
+DEPRECATED
+
+This library was intended to support type-safe composability of Akka Actors. There are better solutions available today.
+Check out typed actors if you're interested in this. https://doc.akka.io/docs/akka/2.2/scala/typed-actors.html
+
+---
+
 A Scala macro for converting a case class into its abstract equivalent.
 
 # The problem
